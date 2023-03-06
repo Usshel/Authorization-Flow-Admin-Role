@@ -1,0 +1,10 @@
+<mat-card *ngIf="meData$ | async as list">
+    <mat-card-title></mat-card-title>
+    {{list | json}}
+    <mat-card-content>
+       This can be seen by user
+    </mat-card-content>
+</mat-card>
+<div *hasRole="'admin'">
+    This can be seen by Admin
+</div>
